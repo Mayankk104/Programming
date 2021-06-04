@@ -9,7 +9,6 @@ class LinkList{
         int size;
     public:
         LinkList();
-        void display();
 
         void insert_at_beging(int value);
         void insert_at_end(int value);
@@ -17,10 +16,12 @@ class LinkList{
 
         int search(int value);
         int at_index(int index);
+        void display();
+
+        bool update(int previous,int new_value);
+        bool udapte_at_index(int value,int index);
 
         bool remove_at(int index);
         bool remove(int value);
 
-        bool update(int previous,int new_value);
-        bool udapte_at_index(int value,int index);
 };
