@@ -1,4 +1,4 @@
-const arr = ['Komal', 'Mayank', 'I', 'Am', 'Lvu', 'Haha'];
+const arr = ['I', 'am', 'cat', 'lover'];
 
 arr.forEach(str => {
     console.log(reverse(str));
