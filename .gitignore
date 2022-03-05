@@ -10,3 +10,5 @@ clean.sh
 clean.bat
 
 .DS_Store
+
+node_modules
