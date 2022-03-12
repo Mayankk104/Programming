@@ -1,4 +1,4 @@
-let arr: number[] = [];
+let a: number[] = [];
 let randomNumber: number;
 
 function Insertion(arr: number[]) {
@@ -16,11 +16,11 @@ function Insertion(arr: number[]) {
 
 for (let i = 0; i < 100; i++) {
     randomNumber = Math.floor(Math.random() * 200);
-    arr.push(randomNumber);
+    a.push(randomNumber);
 }
 
-console.log(arr);
-console.log(Insertion(arr));
+console.log(a);
+console.log(Insertion(a));
 
 
 // Space Complexity
