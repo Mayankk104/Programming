@@ -1,9 +1,3 @@
-const arr = ['I', 'am', 'cat', 'lover'];
-
-arr.forEach(str => {
-    console.log(reverse(str));
-});
-
 function reverse(str) {
     let l = str.length;
     for (let i = 0; i < Math.floor(l / 2); i++)
@@ -16,4 +10,5 @@ function reverse(str) {
     return str;
 }
 
+reverse('Mayank');
 //TODO: Add attach this method to prototype
