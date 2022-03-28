@@ -3,6 +3,7 @@ function countSubstrings(s: string): number {
     let l: number, r: number, count: number = 0;
 
     for (let i = 0; i < s.length; i++) {
+        // Odds
         l = r = i;
         while (l >= 0 && r < s.length) {
             if (s[l] === s[r]) {
@@ -13,6 +14,8 @@ function countSubstrings(s: string): number {
                 break;
             }
         }
+
+        // Evens
         l = r = i;
         r++;
         while (l >= 0 && r < s.length) {
