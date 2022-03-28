@@ -14,7 +14,6 @@ function jump(nums: number[]): number {
 
         l = r + 1;
         r = furthest;
-        console.log(l, r);
         jump++;
     }
     return jump;
