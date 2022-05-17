@@ -1,12 +1,11 @@
 *.exe
-*.class
-*.txt
 *.out
 *.o
-
-clean.sh
-clean.bat
+*
+!*/
+!*.*
 
 .DS_Store
 
+package-lock.json
 node_modules
