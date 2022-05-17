@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "c++ build active file",
+            "command": "/opt/homebrew/bin/g++-11",
+            // "command": "/usr/bin/clang++",   give path to c++ compiler installed in your stsyem
+            "args": [
+                "-std=c++11",
+                // "-stdlib=libc++",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "clang++ run active file",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn":["c++ build active file" ]
+        }
+    ]
+}
