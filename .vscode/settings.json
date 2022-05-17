@@ -1,0 +1,9 @@
+{
+    "editor.formatOnSave": false,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "files.associations": {
+        "iostream": "cpp"
+    }
+}
