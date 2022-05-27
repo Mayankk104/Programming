@@ -14,5 +14,8 @@
 #### clean workspace
 - if you can run bash files from your system run `bash clean.sh` to remove unwanted build files and directories.
 
+# Todos
+- [ ] Trajans Algorithm
+- [ ] Dijkstra Algorithm
 
 Thank you 😄
