@@ -1,4 +1,4 @@
-// 15. 3Sum https://leetcode.com/submissions/detail/694958960/
+// 15. 3Sum https://leetcode.com/submissions/detail/694958960/ #Blind75
 
 #include <iostream>
 #include <vector>
@@ -68,7 +68,8 @@ int main()
 	{
 		for (auto v4 : v3)
 		{
-			cout << v4 << " " << endl;
+			cout << v4 << " ";
 		}
+		cout << endl;
 	}
 }
