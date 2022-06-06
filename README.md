@@ -21,5 +21,6 @@
 ### Todos
 - [ ] Trajans Algorithm
 - [ ] Dijkstra Algorithm
+- [ ] N Queen
 
 Thank you 😄
