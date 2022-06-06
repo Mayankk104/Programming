@@ -1,7 +1,7 @@
 {
   "name": "ds_algo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A repo with programming questions in typescript and c++, this is created for preprartion for interviews",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/Mayankk104/DS_Algo.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mayank kumar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Mayankk104/DS_Algo/issues"
