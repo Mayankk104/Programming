@@ -3,12 +3,10 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "c++ build active file",
+            "label": "C++ build active file",
             "command": "/opt/homebrew/bin/g++-11",
-            // "command": "/usr/bin/clang++",   give path to c++ compiler installed in your stsyem
             "args": [
                 "-std=c++11",
-                // "-stdlib=libc++",
                 "-g",
                 "${file}",
                 "-o",
@@ -19,15 +17,11 @@
             },
             "problemMatcher": [
                 "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": false
-            }
+            ]
         },
         {
             "type": "shell",
-            "label": "clang++ run active file",
+            "label": "C++ run active file",
             "command": "${fileDirname}/${fileBasenameNoExtension}",
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -35,11 +29,28 @@
             "problemMatcher": [
                 "$gcc"
             ],
+            "dependsOn": [
+                "C++ build active file"
+            ],
+            "presentation": {
+                "focus": true,
+                "clear": true
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
+            }
+        },
+        {
+            "label": "TS run current file withnodemon",
+            "command": "npx nodemon ${file}",
+            "type": "shell",
+            "presentation": {
+                "panel": "new",
+                "showReuseMessage": false
             },
-            "dependsOn":["c++ build active file" ]
+            "problemMatcher": "$tsc",
+            "group": "build"
         }
     ]
 }

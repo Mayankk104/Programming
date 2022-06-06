@@ -1,5 +1,4 @@
 #include<iostream>
-#include<conio.h>
 #include<vector>
 
 using namespace std;
@@ -19,8 +18,6 @@ int main(){
     }else{
         cout<<"NO, Given sentence is not a Pangram.";
     }
-    
-    getch();
 }
 
 

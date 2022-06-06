@@ -1,4 +1,5 @@
-// 15. 3Sum https://leetcode.com/submissions/detail/694958960/ #Blind75
+// 15. 3Sum https://leetcode.com/submissions/detail/694958960/ 
+// #Blind75 #medium #two-pointer
 
 #include <iostream>
 #include <vector>
