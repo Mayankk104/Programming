@@ -38,19 +38,17 @@
             },
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": true,
             }
         },
         {
             "label": "TS run current file withnodemon",
-            "command": "npx nodemon ${file}",
+            "command": "npx ts-node ${relativeFile}",
             "type": "shell",
-            "presentation": {
-                "panel": "new",
-                "showReuseMessage": false
+            "group": {
+                "kind": "none",
             },
-            "problemMatcher": "$tsc",
-            "group": "build"
+            "problemMatcher": "$tsc"
         }
     ]
 }
