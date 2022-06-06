@@ -1,5 +1,6 @@
-// 15. 3Sum https://leetcode.com/submissions/detail/694958960/ 
-// #Blind75 #medium #two-pointer
+// 15. 3Sum: (https://leetcode.com/problems/3sum)
+// Tags: #Blind75 #medium #two-pointer #array
+// Efficiency: Time Complexity O(n^2), Space Complexity O(1)
 
 #include <iostream>
 #include <vector>
@@ -7,70 +8,55 @@
 
 using namespace std;
 
-class Solution
-{
+class Solution {
 public:
-	vector<vector<int>> threeSum(vector<int> &nums)
-	{
-		vector<vector<int>> res;
-		int l, r, sum;
-		int n = nums.size();
+	vector<vector<int>> threeSum(vector<int> &nums) {
+		vector<vector<int>> result;
+		int l, r, sum, size = nums.size();
 
 		sort(nums.begin(), nums.end());
 
-		if (n < 3 || nums[0] > 0)
-			return res;
+		if (size < 3 || nums[0] > 0)
+			return result;
 
-		for (int i = 0; i < n; i++)
-		{
+		for (int i = 0; i < size; i++) {
 			if (i > 0 and nums[i] == nums[i - 1])
 				continue;
 
 			l = i + 1;
-			r = n - 1;
+			r = size - 1;
 
-			while (l < r)
-			{
+			while (l < r) {
 				sum = nums[l] + nums[r] + nums[i];
 
 				if (sum > 0)
 					r--;
 				else if (sum < 0)
 					l++;
-				else
-				{
-					vector<int> r1;
-					r1.push_back(nums[i]);
-					r1.push_back(nums[l]);
-					r1.push_back(nums[r]);
-					res.push_back(r1);
+				else {
+					vector<int> triplate = { nums[i], nums[l], nums[r] };
+					result.push_back(triplate);
 
-					while (nums[l] == nums[l + 1] and l + 1 < r)
-					{
+					while (nums[l] == nums[l + 1] and l + 1 < r) 
 						l++;
-					}
 
 					l++;
 				}
 			}
 		}
-		return res;
+		return result;
 	}
 };
 
-int main()
-{
-	vector<int> v = {0, 0, 0, 0};
-	Solution s;
+int main() {
+	vector<int> input = { -1, 0, 1, 2, -1, -4 };
+	Solution solution;
 
-	vector<vector<int>> v2 = s.threeSum(v);
+	vector<vector<int>> output = solution.threeSum(input);
 
-	for (auto v3 : v2)
-	{
-		for (auto v4 : v3)
-		{
-			cout << v4 << " ";
-		}
+	for (auto row: output) {
+		for (auto element: row)
+			cout << element << " ";
 		cout << endl;
 	}
 }
