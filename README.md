@@ -14,7 +14,11 @@
 #### clean workspace
 - if you can run bash files from your system run `bash clean.sh` to remove unwanted build files and directories.
 
-# Todos
+
+### Search with Tags
+ you can use `grep -E '#two-pointer|#array|#medium' -rl src` to get the list particular kind of questions
+
+### Todos
 - [ ] Trajans Algorithm
 - [ ] Dijkstra Algorithm
 

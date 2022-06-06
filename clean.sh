@@ -1,4 +1,3 @@
-
 find src/ -type f ! -name "*.*"
 find src/ -type f ! -name "*.*" -exec rm {} \;
 
