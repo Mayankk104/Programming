@@ -1,35 +1,36 @@
-// 1. Two Sum: https://leetcode.com/problems/two-sum/
-#include <bits/stdc++.h>
+// 1. Two Sum: https://leetcode.com/problems/two-sum
+// Tags: #easy #array
+// Efficiency: Time Complexity O(n), Space Complexity O(n)
+
+#include <iostream>
 #include <unordered_map>
 #include <vector>
 using namespace std;
 
-class Solution
-{
-public:
-	vector<int> twoSum(vector<int> &nums, int target)
-	{
-		unordered_map<int, int> m;
-		vector<int> res;
-		for (int i = 0; i < nums.size(); i++)
-		{
-			if (m.find(target - nums[i]) != m.end())
-			{
-				res.push_back(m[target - nums[i]]);
-				res.push_back(i);
-				return res;
+class Solution {
+	public:
+	vector<int> twoSum(vector<int> &nums, int target) {
+		unordered_map<int, int> hashMap;
+		vector<int> result;
+
+		for (int i = 0; i < nums.size(); i++) {
+			if (hashMap.find(target - nums[i]) != hashMap.end()) {
+				result = { hashMap[target - nums[i]], i };
+				return result;
 			}
-			m[nums[i]] = i;
+			hashMap[nums[i]] = i;
 		}
 
-		return res;
+		return result;
 	}
 };
 
-int main()
-{
-	Solution s;
-	vector v = {2, 7, 11, 15};
-	for (auto val : s.twoSum(v, 26))
-		cout << val << endl;
+int main() {
+	Solution solution;
+	vector<int> values = { 2, 7, 11, 15 };
+	int target = 26;
+	vector<int> output = solution.twoSum(values, target);
+
+	for(auto index: output)
+		cout << index << " ";
 }
