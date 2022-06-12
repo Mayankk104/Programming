@@ -1,6 +1,7 @@
 // leetcode: 3. Longest Substring Without Repeating Characters(https://leetcode.com/problems/longest-substring-without-repeating-characters)
 // tags: #sliding-window #string #medium
 // efficiency: Time Complexity O(n), Space Complexity O(n)
+// similar questions: (https://leetcode.com/problems/maximum-erasure-value)
 
 #include <unordered_map>
 #include <iostream>
