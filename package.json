@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/Mayankk104/DS_Algo#readme",
   "devDependencies": {
-    "nodemon": "^2.0.15",
-    "ts-node": "^10.6.0",
-    "tsconfig-paths": "^3.13.0"
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.0.0"
   }
 }
