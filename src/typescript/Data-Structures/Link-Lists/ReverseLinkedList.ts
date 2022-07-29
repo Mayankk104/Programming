@@ -1,16 +1,16 @@
-// leetcode: 206. Reverse Linked List https://leetcode.com/problems/reverse-linked-list/ #Blind_75
+// leetcode: 206. Reverse Linked List https://leetcode.com/problems/reverse-linked-list/ 
+// Tags: #Blind_75
+// Efficiency: Time Complexity O(n), Space Complexity O(1)
 
 class ListNode {
-    val: number
-    next: ListNode | null
-    constructor(val?: number, next?: ListNode | null) {
-        this.val = (val === undefined ? 0 : val)
-        this.next = (next === undefined ? null : next)
-    }
+    constructor(
+        private val: number = 0,
+        public next: ListNode | null = null
+    ) { }
 }
 
 function reverseList(head: ListNode | null): ListNode | null {
-    let previous = null
+    let previous: ListNode | null = null;
     let current = head;
     let next;
 
