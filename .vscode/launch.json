@@ -2,31 +2,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "clang++ - Build and debug active file",
+            "name": "C++ Debugging",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
             "MIMode": "lldb",
             "preLaunchTask": "C++ build active file"
-          },
+        },
         {
-            "type": "pwa-node",
+            "name": "Typescript Debugging",
+            "type": "node",
             "request": "launch",
-            "name": "Typescript Deugger",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}\/src\/",  // Path to file to debug
-            "runtimeArgs": ["-r", "ts-node/register", "-r", "tsconfig-paths/register"],
-            "outFiles": [
-                "${workspaceFolder}/**/*.js",
-                "!**/node_modules/**"
-            ]
+            "program": "${relativeFile}", // Path to file to debug
+            "skipFiles": ["<node_internals>/**"],
+            "runtimeArgs": ["-r", "ts-node/register"]
         }
     ]
 }
