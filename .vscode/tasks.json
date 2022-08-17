@@ -3,21 +3,27 @@
     "tasks": [
         {
             "label": "C++ build active file",
-            "command": "clang++",
-            "args": [ "-std=c++11", "-g", "${file}", "-o", "${fileDirname}/${fileBasenameNoExtension}" ],
-            "problemMatcher": [ "$gcc" ],
+            "command": "g++-11",
+            "args": [
+                "-std=c++11",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "problemMatcher": ["$gcc"]
         },
         {
             "label": "C++ run active file",
             "command": "${fileDirname}/${fileBasenameNoExtension}",
-            "problemMatcher": [ "$gcc" ],
-            "dependsOn": [ "C++ build active file" ],
+            "problemMatcher": ["$gcc"],
+            "dependsOn": ["C++ build active file"]
         },
         {
             "label": "TypeScript run active file",
             "command": "npx ts-node ${relativeFile}",
-            "problemMatcher": "$tsc",
-        },
+            "problemMatcher": "$tsc"
+        }
     ],
     "type": "shell",
     "presentation": {
@@ -27,6 +33,5 @@
     },
     "options": {
         "cwd": "${workspaceFolder}"
-    },
-
+    }
 }
