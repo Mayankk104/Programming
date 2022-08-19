@@ -4,7 +4,7 @@
 - this workspace contains pre-written tasks for **debugging**, **running** c++ files,and **cleaning** output files files quickly from vscode
 
 #### before using this workspace
-- if you want to clone and use this workspace you have to follow steps:
+- if you want to use this workspace you have to follow steps:
 	- change c++ compiler in `.vscode/tasks.json`, I used gcc compiler on mac and set path according to that, you can set path to c++ compiler according to your system.
 
 #### how to run a particular file
@@ -17,10 +17,5 @@
 
 ### Search with Tags
  you can use `grep -E '#two-pointer|#array|#medium' -rl src` to get the list particular kind of questions
-
-### Todos
-- [ ] Trajans Algorithm
-- [ ] Dijkstra Algorithm
-- [ ] N Queen
 
 Thank you 😄

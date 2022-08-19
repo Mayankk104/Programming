@@ -2,9 +2,8 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "shell",
             "label": "C++ build active file",
-            "command": "/opt/homebrew/bin/g++-11",
+            "command": "g++-11",
             "args": [
                 "-std=c++11",
                 "-g",
@@ -12,43 +11,27 @@
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "problemMatcher": ["$gcc"]
         },
         {
-            "type": "shell",
             "label": "C++ run active file",
             "command": "${fileDirname}/${fileBasenameNoExtension}",
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "dependsOn": [
-                "C++ build active file"
-            ],
-            "presentation": {
-                "focus": true,
-                "clear": true
-            },
-            "group": {
-                "kind": "build",
-                "isDefault": true,
-            }
+            "problemMatcher": ["$gcc"],
+            "dependsOn": ["C++ build active file"]
         },
         {
-            "label": "TS run current file withnodemon",
+            "label": "TypeScript run active file",
             "command": "npx ts-node ${relativeFile}",
-            "type": "shell",
-            "group": {
-                "kind": "none",
-            },
             "problemMatcher": "$tsc"
         }
-    ]
+    ],
+    "type": "shell",
+    "presentation": {
+        "focus": true,
+        "panel": "shared",
+        "clear": true
+    },
+    "options": {
+        "cwd": "${workspaceFolder}"
+    }
 }
