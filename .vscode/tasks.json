@@ -3,7 +3,7 @@
     "tasks": [
         {
             "label": "C++ build active file",
-            "command": "g++-11",
+            "command": "g++",
             "args": [
                 "-std=c++11",
                 "-g",
