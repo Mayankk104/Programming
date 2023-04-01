@@ -2,7 +2,8 @@
 
 function maxProduct(nums: number[]): number {
     let res: number = Math.max(...nums);
-    let min = 1, max = 1;
+    let min = 1,
+        max = 1;
 
     for (let num of nums) {
         if (num == 0) {
@@ -11,7 +12,7 @@ function maxProduct(nums: number[]): number {
             continue;
         }
 
-        let temp = max * num
+        let temp = max * num;
         max = Math.max(num, max * num, min * num);
         min = Math.min(num, temp, min * num);
         res = Math.max(min, max, res);

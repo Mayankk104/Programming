@@ -16,13 +16,12 @@ function isValid(s: string): boolean {
                 stack.push("}");
                 break;
             default:
-                if (s.charAt(i) != stack.pop())
-                    return false;
+                if (s.charAt(i) != stack.pop()) return false;
                 break;
         }
     }
 
     return stack.length == 0;
-};
+}
 
-console.log(isValid('({)}[]'));
+console.log(isValid("({)}[]"));

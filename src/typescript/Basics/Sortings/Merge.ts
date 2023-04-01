@@ -1,9 +1,8 @@
 console.clear();
 function merge(arr: number[]): number[] {
-    if (arr.length <= 1)
-        return arr;
+    if (arr.length <= 1) return arr;
 
-    let arr2 = arr.splice(0, Math.floor((arr.length) / 2));
+    let arr2 = arr.splice(0, Math.floor(arr.length / 2));
     arr2 = merge(arr2);
     arr = merge(arr);
 
@@ -11,7 +10,8 @@ function merge(arr: number[]): number[] {
 }
 
 function merge_sorted_arraies(arr1: number[], arr2: number[]) {
-    let i = 0, j = 0;
+    let i = 0,
+        j = 0;
     let arr: number[] = [];
 
     while (i !== arr1.length || j !== arr2.length) {

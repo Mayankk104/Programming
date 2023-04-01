@@ -10,7 +10,6 @@ function Insertion(arr: number[]) {
                 break;
             }
 
-
     return arr;
 }
 
@@ -22,11 +21,10 @@ for (let i = 0; i < 100; i++) {
 console.log(a);
 console.log(Insertion(a));
 
-
 // Space Complexity
-    // O(1)
+// O(1)
 
 // Time Complexity
-    // Best   O(n)
-    // Avg    O(n²)
-    // Worst  O(n²)
+// Best   O(n)
+// Avg    O(n²)
+// Worst  O(n²)

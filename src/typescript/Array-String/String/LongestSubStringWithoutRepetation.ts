@@ -9,21 +9,20 @@ function lengthOfLongestSubstring(s: string): number {
     for (let i = 0; i < s.length; i++) {
         if (!set.has(s[i])) {
             set.add(s[i]);
-            count++
+            count++;
         } else {
             while (s[l] !== s[i]) {
-                set.delete(s[l])
+                set.delete(s[l]);
                 l++;
                 count--;
             }
             l++;
         }
 
-        if (count > maxLength)
-            maxLength = count;
+        if (count > maxLength) maxLength = count;
     }
 
     return maxLength;
-};
+}
 
-lengthOfLongestSubstring('aabaab!b');
+lengthOfLongestSubstring("aabaab!b");

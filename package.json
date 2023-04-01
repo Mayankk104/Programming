@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Mayankk104/DS_Algo#readme",
   "devDependencies": {
     "nodemon": "^2.0.19",
+    "prettier": "^2.8.7",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.0.0"
   }

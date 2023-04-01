@@ -1,6 +1,8 @@
 // leetcode: 647. https://leetcode.com/problems/palindromic-substrings/
 function countSubstrings(s: string): number {
-    let l: number, r: number, count: number = 0;
+    let l: number,
+        r: number,
+        count: number = 0;
 
     for (let i = 0; i < s.length; i++) {
         // Odds
@@ -27,10 +29,9 @@ function countSubstrings(s: string): number {
                 break;
             }
         }
-
     }
 
     return count;
-};
+}
 
 console.log(countSubstrings("abababa"));
