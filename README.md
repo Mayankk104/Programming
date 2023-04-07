@@ -1,5 +1,4 @@
 # Programming
-
 - it is a workspace while I am preparing for interviews
 - this workspace contains pre-written tasks for **debugging**, **running** c++ files,and **cleaning** output files files quickly from vscode
 
@@ -8,8 +7,8 @@
 	- change c++ compiler in `.vscode/tasks.json`, I used gcc compiler on mac and set path according to that, you can set path to c++ compiler according to your system.
 
 #### for windows users
-- Windows user in to use cmd as a default terminal to run files throught `vscode tasks`
-- you can add below line in `.vsode/settings.jso`n to make CMD as default terminal
+- Windows user need to use cmd as a default terminal to run files throught `vscode tasks`
+- you can add below line in `.vsode/settings.json` to make CMD as default terminal
 ``` json
 "terminal.integrated.defaultProfile.windows": "Command Prompt"
 ```
