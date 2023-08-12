@@ -1,12 +1,12 @@
 {
-    "editor.formatOnSave": true,
-    "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "files.associations": {
-        "iostream": "cpp"
-    }
+  "editor.formatOnSave": true,
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "files.associations": {
+    "iostream": "cpp",
+    "unordered_map": "cpp"
+  },
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}"
 }
