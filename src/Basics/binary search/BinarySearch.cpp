@@ -7,18 +7,17 @@
 using namespace std;
 
 int binarySearch(vector<int>& numbers, int target) {
-    int left = 0, right = numbers.size() - 1, middle = ((left + right) / 2);
+    int left = 0, right = numbers.size() - 1, middle;
 
     while (right >= left) {
-        if (numbers[middle] == target)
-            return middle;
+        middle = left + ((right - left) / 2);
+
+        if (numbers[middle] == target) return middle;
 
         if (numbers[middle] < target)
             left = middle + 1;
         else
             right = middle - 1;
-
-        middle = ((left + right) / 2);
     }
 
     return -1;

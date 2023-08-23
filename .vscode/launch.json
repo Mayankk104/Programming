@@ -7,7 +7,7 @@
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
             "cwd": "${workspaceFolder}",
-            "MIMode": "lldb",
+            "MIMode": "gdb",
             "preLaunchTask": "C++ build active file"
         },
         {
