@@ -1,32 +1,36 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "C++ build active file",
-      "command": "g++",
-      "args": [
-        "-std=c++11",
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}/${fileBasenameNoExtension}"
-      ],
-      "problemMatcher": ["$gcc"]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++ build active file",
+            "command": "g++",
+            "args": ["-std=c++11", "-g", "${file}", "-o", "${fileDirname}/${fileBasenameNoExtension}"],
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "C++ run active file",
+            "command": "g++",
+            "args": [
+                "-std=c++11",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I",
+                "${fileDirname}",
+                "${fileDirname}/**/*.cpp",
+                "&&",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "problemMatcher": ["$gcc"],
+            "dependsOn": ["C++ build active file"]
+        }
+    ],
+    "type": "shell",
+    "presentation": {
+        "focus": true,
+        "panel": "shared",
+        "clear": true
     },
-    {
-      "label": "C++ run active file",
-      "command": "${fileDirname}/${fileBasenameNoExtension}",
-      "problemMatcher": ["$gcc"],
-      "dependsOn": ["C++ build active file"]
+    "options": {
+        "cwd": "${workspaceFolder}"
     }
-  ],
-  "type": "shell",
-  "presentation": {
-    "focus": true,
-    "panel": "shared",
-    "clear": true
-  },
-  "options": {
-    "cwd": "${workspaceFolder}"
-  }
 }
