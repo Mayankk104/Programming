@@ -2,25 +2,11 @@
 #include <vector>
 
 #include "./lib/headers/graph.hpp"
-
-using namespace std;
+#include "./lib/headers/path_indirected_graph.hpp"
 
 using namespace std;
 
 int main() {
-    vector<vector<int>> input = {
-        {1, 2},
-        {4, 1},
-        {2, 4},
-        {3, 4},
-        {5, 2},
-        {1, 3}};
-
-    Graph graph;
-
-    for (auto edge : input) {
-        graph.addEdge(edge[0], edge[1]);
-    }
-
-    cout << graph.hasConnectingEdge(1, 5);
+    PathInDirectedGraph path_in_directed_graph;
+    cout << path_in_directed_graph.solve(5) << endl;
 }
