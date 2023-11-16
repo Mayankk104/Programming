@@ -8,7 +8,7 @@
             "problemMatcher": ["$gcc"]
         },
         {
-            "label": "C++ run active file",
+            "label": "C++ run active file with custom header imports",
             "command": "g++",
             "args": [
                 "-std=c++11",
@@ -20,8 +20,22 @@
                 "&&",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
-            "problemMatcher": ["$gcc"],
-            "dependsOn": ["C++ build active file"]
+            "problemMatcher": ["$gcc"]
+            // "dependsOn": ["C++ build active file"]
+        },
+        {
+            "label": "C++ run active current file ",
+            "command": "g++",
+            "args": [
+                "-std=c++11",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "${fileDirname}/${fileBasenameNoExtension}.cpp",
+                "&&",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "problemMatcher": ["$gcc"]
+            // "dependsOn": ["C++ build active file"]
         }
     ],
     "type": "shell",
