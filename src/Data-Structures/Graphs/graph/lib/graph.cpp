@@ -17,6 +17,8 @@ void Graph::dfs(int num) {
 
     for (i = this->adjecent_list[num].begin(); i != adjecent_list[num].end(); i++)
         if (!visited[*i]) dfs(*i);
+
+    cout << endl;
 }
 
 bool Graph::hasConnectingEdge(int from, int to) {
@@ -32,8 +34,3 @@ bool Graph::hasConnectingEdge(int from, int to) {
 
     return visited[to];
 }
-
-class Demo {
-    void doNothing() {
-    }
-};
