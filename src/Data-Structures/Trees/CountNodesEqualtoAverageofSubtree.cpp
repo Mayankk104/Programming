@@ -2,8 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct TreeNode
-{
+struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
@@ -12,22 +11,18 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-class Solution
-{
-public:
-    pair<int, int> helper(TreeNode *node, int &count)
-    {
+class Solution {
+   public:
+    pair<int, int> helper(TreeNode *node, int &count) {
         pair<int, int> p = {node->val, 1};
 
-        if (node->right != NULL)
-        {
+        if (node->right != NULL) {
             pair<int, int> tempP = helper(node->right, count);
             p.first += tempP.first;
             p.second += tempP.second;
         }
 
-        if (node->left != NULL)
-        {
+        if (node->left != NULL) {
             auto tempP = helper(node->left, count);
             p.first += tempP.first;
             p.second += tempP.second;
@@ -39,16 +34,14 @@ public:
         return p;
     }
 
-    int averageOfSubtree(TreeNode *root)
-    {
+    int averageOfSubtree(TreeNode *root) {
         int count = 0;
         helper(root, count);
         return count;
     }
 };
 
-int main()
-{
+int main() {
     Solution s;
 
     TreeNode n(4);
