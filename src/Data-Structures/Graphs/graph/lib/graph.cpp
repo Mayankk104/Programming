@@ -1,7 +1,7 @@
 #include "./headers/graph.hpp"
 
 #include <iostream>
-#include <list>
+#include <vector>
 
 using namespace std;
 
@@ -13,7 +13,7 @@ void Graph::dfs(int num) {
     this->visited[num] = true;
     cout << num << "->";
 
-    list<int>::iterator i;
+    vector<int>::iterator i;
 
     for (i = this->adjecent_list[num].begin(); i != adjecent_list[num].end(); i++)
         if (!visited[*i]) dfs(*i);
@@ -27,7 +27,7 @@ bool Graph::hasConnectingEdge(int from, int to) {
     this->visited[from] = true;
     cout << from << "=>";
 
-    list<int>::iterator i;
+    vector<int>::iterator i;
 
     for (i = this->adjecent_list[from].begin(); i != adjecent_list[from].end(); i++)
         if (!visited[*i]) dfs(*i);

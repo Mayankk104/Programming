@@ -1,12 +1,12 @@
 #pragma once
-#include <list>
-#include <map>
+#include <unordered_map>
+#include <vector>
 
 using namespace std;
 
 class Graph {
-    map<int, bool> visited;
-    map<int, list<int>> adjecent_list;
+    unordered_map<int, bool> visited;
+    unordered_map<int, vector<int>> adjecent_list;
 
    public:
     void dfs(int num);
