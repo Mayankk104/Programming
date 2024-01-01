@@ -1,5 +1,5 @@
 // 724. Find Pivot Index: https://leetcode.com/problems/find-pivot-index/
-// Tags: #easy #scaler #M4DSA1
+// Tags: #easy #scaler #M4DSA1 #array1 #additial
 // Efficiency: Time Complexity O(n), Space Complexity O(1)
 
 #include <bits/stdc++.h>
