@@ -1,4 +1,4 @@
-// Tags: #scaler #medimum #M4DSA1 #array1 #additional
+// Tags: #scaler #medium #M4DSA1 #array1 #additional
 // Efficiency: Time Complexity O(n) | Space Complexity: O(1)
 
 #include <climits>
