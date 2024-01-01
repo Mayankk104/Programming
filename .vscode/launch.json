@@ -2,21 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C++ Debugging",
+            "name": "debugging",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
             "cwd": "${workspaceFolder}",
             "MIMode": "gdb",
-            "preLaunchTask": "C++ build active file"
-        },
-        {
-            "name": "Typescript Debugging",
-            "type": "node",
-            "request": "launch",
-            "program": "${relativeFile}", // Path to file to debug
-            "skipFiles": ["<node_internals>/**"],
-            "runtimeArgs": ["-r", "ts-node/register"]
+            "preLaunchTask": "build active file"
         }
     ]
 }
