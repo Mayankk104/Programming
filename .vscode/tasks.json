@@ -24,7 +24,7 @@
     "presentation": {
         "focus": true,
         "panel": "shared",
-        "clear": false,
+        "clear": true,
         "showReuseMessage": false,
         "echo": false
     },
