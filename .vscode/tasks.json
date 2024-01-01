@@ -2,47 +2,31 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "C++ build active file",
+            "label": "build active file",
             "command": "g++",
             "args": ["-std=c++11", "-g", "${file}", "-o", "${fileDirname}/${fileBasenameNoExtension}"],
             "problemMatcher": ["$gcc"]
         },
         {
-            "label": "C++ run active file with custom header imports",
+            "label": "run active file with custom header imports",
             "command": "g++",
-            "args": [
-                "-std=c++11",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}",
-                "-I",
-                "${fileDirname}",
-                "${fileDirname}/**/*.cpp",
-                "&&",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
+            "args": ["-std=c++11", "-o", "${fileDirname}/${fileBasenameNoExtension}", "-I", "${fileDirname}", "${fileDirname}/**/*.cpp", "&&", "${fileDirname}/${fileBasenameNoExtension}"],
             "problemMatcher": ["$gcc"]
-            // "dependsOn": ["C++ build active file"]
         },
         {
-            "label": "C++ run active current file ",
+            "label": "run active current file ",
             "command": "g++",
-            "args": [
-                "-std=c++11",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}",
-                "${fileDirname}/${fileBasenameNoExtension}.cpp",
-                "&&",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
+            "args": ["-std=c++11", "-o", "${fileDirname}/${fileBasenameNoExtension}", "${fileDirname}/${fileBasenameNoExtension}.cpp", "&&", "${fileDirname}/${fileBasenameNoExtension}"],
             "problemMatcher": ["$gcc"]
-            // "dependsOn": ["C++ build active file"]
         }
     ],
     "type": "shell",
     "presentation": {
         "focus": true,
         "panel": "shared",
-        "clear": true
+        "clear": false,
+        "showReuseMessage": false,
+        "echo": false
     },
     "options": {
         "cwd": "${workspaceFolder}"
