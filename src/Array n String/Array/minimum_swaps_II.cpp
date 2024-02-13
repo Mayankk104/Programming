@@ -1,16 +1,16 @@
+// Minimum swaps II
+// Tags: #easy #scaler #M4DSA1 #array2 #additional
+// Time Complexity: O(n) | Space Complexity: O(1)
 #include <iostream>
 #include <vector>
-// TODO: review and rewrite
+
 using namespace std;
 
 int minSwaps(vector<int>& arr) {
-    int n = arr.size();
-    int swaps = 0;
+    int n = arr.size(), swaps = 0;
 
     for (int i = 0; i < n; i++) {
-        // Check if the current element is at its correct position
         while (arr[i] != i) {
-            // Swap the current element with its correct position
             int temp = arr[arr[i]];
             arr[arr[i]] = arr[i];
             arr[i] = temp;
@@ -22,9 +22,8 @@ int minSwaps(vector<int>& arr) {
 }
 
 int main() {
-    // Example usage:
-    vector<int> arr = {2, 0, 1, 3};
-    cout << minSwaps(arr) << endl;  // Output: 1
+    vector<int> input = {2, 0, 1, 3};
+    cout << minSwaps(input) << endl;
 
     return 0;
 }
