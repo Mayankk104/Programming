@@ -1,4 +1,4 @@
-// Tags: #easy #scaler #M4DSA1 #array1 #assingment #kadane's algorithm
+// Tags: #easy #scaler #M4DSA1 #array1 #assignment #kadane's algorithm
 // Time Complexity: O(n) | Space Complexity: O(1)
 
 #include <climits>

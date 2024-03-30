@@ -1,5 +1,5 @@
 
-// Tags: #easy #array1 #scaler #M4DSA1
+// Tags: #easy #scaler #M4DSA1 #array1 #assignment
 // Efficiency: Time Complexity: O(A+B) | Space Complexity: O(1)
 
 #include <iostream>

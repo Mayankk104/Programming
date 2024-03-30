@@ -1,5 +1,5 @@
 // Rain Water Trapped: https://www.interviewbit.com/problems/rain-water-trapped/, https://leetcode.com/problems/trapping-rain-water/
-// Tags: #hard #scaler #M4DSA1 #array3 #assingment
+// Tags: #hard #scaler #M4DSA1 #array3 #assignment
 // Time Complexity: O(n) | Space Complexity: O(n)
 // NOTE: there is a further optimal solution with O(1) space
 

@@ -1,5 +1,5 @@
 // Merge Intervals: https://leetcode.com/problems/merge-intervals/description/
-// Tags: #medium #scaler #M4DSA1 #array2 #assingment #leetcode
+// Tags: #medium #scaler #M4DSA1 #array2 #assignment #leetcode
 // Time Complexity: O(n log n) | Space Complexity: O(1)
 
 #include <algorithm>

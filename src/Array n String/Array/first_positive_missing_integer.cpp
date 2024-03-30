@@ -1,5 +1,5 @@
 // 41. First Missing Positive: https://leetcode.com/problems/first-missing-positive/description/
-// Tags: #hard #scaler #M4DSA1 #array3 #assingment
+// Tags: #hard #scaler #M4DSA1 #array3 #assignment
 // Efficiency: Time Complexity: O(n) | Space Complexity: O(1)
 
 #include <iostream>
