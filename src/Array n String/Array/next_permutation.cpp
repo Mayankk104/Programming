@@ -1,4 +1,6 @@
-// TODO: put tags
+// 31. Next Permutation: https://leetcode.com/problems/next-permutation/description/
+// Tags: #medium #scaler #M4DSA1 #array3 #additional
+// Efficiency: Time Complexity O(N log N), Space Complexity O(1)
 
 #include <algorithm>
 #include <iostream>
@@ -8,7 +10,7 @@ using namespace std;
 
 class Solution {
    public:
-    vector<int> next_permutation(vector<int>& arr) {
+    void next_permutation(vector<int>& arr) {
         int index = -1;
 
         for (int i = arr.size() - 1; i > 0; i--)
@@ -26,16 +28,14 @@ class Solution {
         }
 
         sort(arr.begin() + index + 1, arr.end());
-
-        return arr;
     }
 };
 
 int main() {
     Solution solution;
     vector<int> input = {1, 2, 3};
-    vector<int> output = solution.next_permutation(input);
+    solution.next_permutation(input);
 
     cout << "next permutation: ";
-    for (int num : output) cout << num << " ";
+    for (int num : input) cout << num << " ";
 }
