@@ -8,7 +8,8 @@
         "unordered_map": "cpp",
         "*.tcc": "cpp",
         "ostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "bitset": "cpp"
     },
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}"
