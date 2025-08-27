@@ -25,6 +25,28 @@ class Solution {
     }
 };
 
+class Solution2 {
+    void recursion(vector<vector<int>>& subsets, int num) {
+        int size = subsets.size();
+
+        for (int i = 0; i < size; i++) {
+            vector<int> _subset;
+            for (int _num : subsets[i]) _subset.push_back(_num);
+            _subset.push_back(num);
+            subsets.push_back(_subset);
+        }
+    }
+
+   public:
+    vector<vector<int>> solution(vector<int> nums) {
+        vector<vector<int>> result = {{}};
+
+        for (int num : nums) recursion(result, num);
+
+        return result;
+    }
+};
+
 int main() {
 #ifndef ONLINE_JUDGE
     freopen("./subset_input.txt", "r", stdin);

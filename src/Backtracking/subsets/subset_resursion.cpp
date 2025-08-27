@@ -1,5 +1,5 @@
 // 78. Subsets https://leetcode.com/problems/subsets/description/
-// Tags: #easy #backtracking
+// Tags: #easy #backtracking #scaler #M4DSA1 #array2 #additional
 // Efficiency: Time Complexity O(n * 2^n), Space Complexity O(n * 2^n)
 // space complexity there will 2^n arrays in result and eaching having ~n size
 // time complexity there are 2^n leafs and we have to make n yes or no to reach each leaf node
