@@ -11,6 +11,9 @@
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
             "problemMatcher": [
                 "$gcc"
             ]
@@ -36,7 +39,7 @@
             "label": "run active current file ",
             "command": "g++",
             "args": [
-                "-std=c++11",
+                "-std=c++17",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
                 "${fileDirname}/${fileBasenameNoExtension}.cpp",
