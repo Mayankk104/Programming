@@ -4,10 +4,10 @@ public class SubarrayOR {
     private static final int MOD = (int)1e9+7;
 
     public static int solve(int[] arr) {
-        int size = arr.length, combinations = (size * (size + 1))/2;
-        long result = 0;
+        int size = arr.length;
+        long result = 0, combinations = (long)size * (size + 1)/2;
 
-        for(int i=0; i<27; i++) {
+        for(int i=0; i<27; i++) { // 2^27 =  134217728 ~ (1 * 10^8)
             long consecutive_zeros = 0, count_subarray_with_zeros = 0;
 
             for(int num: arr) {
@@ -21,8 +21,7 @@ public class SubarrayOR {
             count_subarray_with_zeros += (consecutive_zeros * (consecutive_zeros+1))/ 2;
             result += (combinations - count_subarray_with_zeros) * (1<<i);
         }
-
-        return (int)result % MOD;
+        return (int)(result % MOD);
     }
 
     public static void main(String[] args) {
